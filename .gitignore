@@ -31,3 +31,4 @@ public
 #others
 vite.config.js
 package-lock.json
+main.scss
