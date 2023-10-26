@@ -12,7 +12,7 @@ import TheFoot from './components/TheFoot.vue';
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/creations">Creations</RouterLink>
+        <RouterLink to="/creativity">Creativity</RouterLink>
       </nav>
     </section>
   </header>
