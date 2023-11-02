@@ -6,7 +6,6 @@ import TheFoot from './components/TheFoot.vue';
 
 <template>
   <header>
-    <section class="wrapper">
       <TheTop msg="🛁 MatHub" />
 
       <nav>
@@ -14,7 +13,6 @@ import TheFoot from './components/TheFoot.vue';
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/creativity">Creativity</RouterLink>
       </nav>
-    </section>
   </header>
 
   <RouterView />
