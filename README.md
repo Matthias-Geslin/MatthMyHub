@@ -12,8 +12,8 @@
 
 ## Social links
 
-- [Twitter](https://twitter.com/Matthiasgeslin)
+  - [Twitter](https://twitter.com/Matthiasgeslin)
 
-- [Linkedin](https://linkedin.com/in/matthias-geslin)
+  - [Linkedin](https://linkedin.com/in/matthias-geslin)
 
-- [Github](https://github.com/Matthias-Geslin)
+  - [Github](https://github.com/Matthias-Geslin)

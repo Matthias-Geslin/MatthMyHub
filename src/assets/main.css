@@ -24,7 +24,7 @@ header nav {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 0 1rem 0;
   width: 100%;
   font-size: 14px;
 }

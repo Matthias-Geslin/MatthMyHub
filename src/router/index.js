@@ -15,11 +15,6 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
-      path: '/mail',
-      name: 'mail',
-      component: () => import('../views/MailView.vue')
-    },
-    {
       path:'/creativity',
       name:'creativity',
       component: () => import('../views/CreativityView.vue')

@@ -3,5 +3,17 @@ defineProps(['skillName', 'skillPercent'])
 </script>
 
 <template>
-   <h4>{{ skillName }} , {{ skillPercent }}%</h4>
+   <div class="box">
+      <ul>
+         <li>
+            <div class="lang">{{ skillName }}
+               <div class="bar">
+                  <div class="progress">
+                     <span class="percent">{{ skillPercent }}</span>
+                  </div>
+               </div>
+            </div>
+         </li>
+      </ul>
+   </div>
 </template>
