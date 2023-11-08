@@ -23,8 +23,8 @@ const router = createRouter({
       path:'/creativity',
       name:'creativity',
       component: () => import('../views/CreativityView.vue')
-    }
-  ]
-})
+    },
+  ],
+});
 
-export default router
+export default router;
