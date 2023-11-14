@@ -32,3 +32,4 @@ public
 vite.config.js
 package-lock.json
 main.scss
+src/assets/images
