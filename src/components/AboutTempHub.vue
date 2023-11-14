@@ -22,7 +22,7 @@ const skillBar = ([
     </TheImageTemp>
 
     <TheImageTemp 
-        defineSrc="CV.pdf" 
+        defineSrc="src/assets/images/CV.pdf" 
         defineAlt="Picture of my current updated CV.">
     </TheImageTemp>
 
