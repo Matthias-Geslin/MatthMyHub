@@ -83,27 +83,3 @@ export default {
     <a class="next" @click="next()" href="#"><i class="fa-solid fa-chevron-right"></i></a>
   </picture>
 </template>
-
-
-<style scoped>
-picture {
-  display: flex;
-  flex-direction: column;
-}
-.prev, .next , .play, .stop{
-  cursor: pointer;
-  width: 1rem;
-  padding: 16px;
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.7s ease;
-  border-radius: 0 4px 4px 0;
-  text-decoration: none;
-  user-select: none;
-}
-
-.prev:hover, .next:hover, .play:hover, .stop:hover{
-  background-color: rgba(0, 0, 0, 0.257);
-}
-</style>

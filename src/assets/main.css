@@ -101,6 +101,27 @@ header nav a:hover {
   border-width: 1px 0;
 }
 
+picture {
+  display: flex;
+  flex-direction: column;
+}
+
+.prev, .next, .play, .stop {
+  cursor: pointer;
+  width: 1rem;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.7s ease;
+  border-radius: 0 4px 4px 0;
+  text-decoration: none;
+  user-select: none;
+}
+
+.prev:hover, .next:hover, .play:hover, .stop:hover {
+  background-color: rgba(0, 0, 0, 0.257);
+}
+
 footer {
   width: 100%;
   margin-top: 2rem;
