@@ -1,13 +1,36 @@
 <script setup>
 import AboutTemp from './AboutTemp.vue'
-import SkillTemp from './TheSkillTemp.vue'
 import TheImageTemp from '../components/TheImageTemp.vue'
 
-const skillBar = ([
-        {id:1, skillName:'HTML5', skillPercent:'undefined'},
-        {id:2, skillName:'CSS3', skillPercent:'undefined'},
-        {id:3, skillName:'Vue', skillPercent:'undefined'}
-    ])
+</script>
+
+<script>
+  export default {
+    data() {
+      return {
+        listItems: []
+      }
+    },
+    methods: {
+      async getData() {
+        const res = await fetch("https://api.github.com/repos/Matthias-Geslin/main/languages");
+        const finalRes = await res.json();
+        this.listItems = finalRes;
+        var totalValue = [finalRes][0]["Vue"]+[finalRes][0]["HTML"]+[finalRes][0]["CSS"]+[this.listItems][0]["JavaScript"];
+        
+        // get bytes data to % float 2 decimals
+        var vueValue = (([finalRes][0]["Vue"] / totalValue)*100).toFixed(2);
+        var cssValue = (([finalRes][0]["CSS"] / totalValue)*100).toFixed(2);
+        var jsValue = (([finalRes][0]["JavaScript"] / totalValue)*100).toFixed(2);
+        var htmlValue = (([finalRes][0]["HTML"] / totalValue)*100).toFixed(2);
+
+        this.listItems = [["Vue",vueValue], ["Css", cssValue], ["JavaScript", jsValue] ,["Html", htmlValue]];
+      }
+    },
+    mounted() {
+      this.getData()
+    }
+  }
 </script>
 
 <template>
@@ -26,10 +49,7 @@ const skillBar = ([
         defineAlt="Picture of my current updated CV.">
     </TheImageTemp>
 
-    <SkillTemp
-        v-for="prop in skillBar" 
-        :key="prop.id" 
-        :skillName="prop.skillName"
-        :skillPercent="prop.skillPercent">
-    </SkillTemp>
+    <div v-for="(value) in listItems">
+    {{ value[0] }} : {{ value[1] }}%
+  </div>
 </template>
