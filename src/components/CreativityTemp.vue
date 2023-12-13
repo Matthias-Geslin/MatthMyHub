@@ -4,11 +4,9 @@ export default {
   data() {
     return {
       images: [
-        "src/assets/images/01.jpg",
-        "src/assets/images/02.jpg",
-        "src/assets/images/03.jpg",
-        "src/assets/images/04.jpg",
-        "src/assets/images/05.jpg"
+        "src/assets/images/project_1.jpg",
+        "src/assets/images/project_3.jpg",
+        "src/assets/images/project_4.jpg"
       ],
       timer: null,
       currentIndex: 0
@@ -74,12 +72,15 @@ export default {
 </script>
 
 <template>
+  <h3>Original creator of these technical & design projects below.</h3>
   <picture>
-    <img :src="currentImg" v-for="i in [currentIndex]" :key="i" />
+    <img :src="currentImg" v-for="i in [currentIndex]" :key="i"/>
 
-    <a class="prev" @click="prev()" href="#"><i class="fa-solid fa-chevron-left"></i></a>
-    <a class="play" @click="play()" href="#"><i class="fa-solid fa-play"></i></a>
-    <a class="stop" @click="stop()" href="#"><i class="fa-solid fa-pause"></i></a>
-    <a class="next" @click="next()" href="#"><i class="fa-solid fa-chevron-right"></i></a>
+    <span class="controls">
+      <a class="prev" @click="prev()" href="#"><i class="fa-solid fa-chevron-left"></i></a>
+      <a class="play" @click="play()" href="#"><i class="fa-solid fa-play"></i></a>
+      <a class="stop" @click="stop()" href="#"><i class="fa-solid fa-pause"></i></a>
+      <a class="next" @click="next()" href="#"><i class="fa-solid fa-chevron-right"></i></a>
+    </span>
   </picture>
 </template>
