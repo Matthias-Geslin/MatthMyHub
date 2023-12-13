@@ -63,12 +63,12 @@ p {
 body {
   color: var(--text-primary-color);
   background-color: var(--background-color-secondary);
-  margin: auto;
+  margin: 0 0 5rem 0;
+  height: 100%;
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 #app {
-  max-width: 1280px;
   margin: 0 auto;
   font-weight: normal;
 }
@@ -89,7 +89,6 @@ header nav {
   text-align: center;
   padding: 1rem 0 1rem 0;
   width: 100%;
-  font-size: 14px;
 }
 header nav a {
   display: inline-block;
@@ -101,9 +100,41 @@ header nav a:hover {
   border-width: 1px 0;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+}
+section h3 {
+  text-align: center;
+}
+
+.baseContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+.baseContent p {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--accent-color);
+}
+
 picture {
   display: flex;
   flex-direction: column;
+}
+picture img {
+  user-select: none;
+  max-width: 85%;
+  margin: 0 10%;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 1rem;
+  background-color: var(--accent-color);
 }
 
 .prev, .next, .play, .stop {
@@ -119,12 +150,12 @@ picture {
 }
 
 .prev:hover, .next:hover, .play:hover, .stop:hover {
-  background-color: rgba(0, 0, 0, 0.257);
+  background-color: var(--text-primary-color);
+  color: var(--background-color-secondary);
 }
 
 footer {
   width: 100%;
-  margin-top: 2rem;
   position: fixed;
   bottom: 0;
   background-color: var(--background-color-tertiary);
@@ -138,7 +169,8 @@ footer ul {
 }
 
 .defineImg {
-  width: 10rem;
+  margin: auto;
+  width: 70%;
 }
 
 a {
@@ -155,43 +187,12 @@ i {
   height: 32px;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+@media (min-width: 1281px) {
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    font-size: 1.3rem;
   }
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-  header {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-  .about {
-    min-height: 100vh;
-    display: flex;
+  .home {
+    height: -webkit-fill-available;
     align-items: center;
-  }
-  i {
-    top: calc(50% - 25px);
-    left: -26px;
-    position: absolute;
-    border-radius: 8px;
-    width: 50px;
-    height: 50px;
   }
 }
