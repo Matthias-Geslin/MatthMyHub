@@ -1,8 +1,4 @@
 <template>
-    <h3>
-        <slot name="heading"></slot>
-    </h3>
-    <p>
-        <slot name="content"></slot>
-    </p>
+    <slot name="heading"></slot>
+    <slot name="content"></slot>
 </template>
