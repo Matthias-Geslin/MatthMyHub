@@ -35,14 +35,16 @@ import TheImageTemp from '../components/TheImageTemp.vue'
 
 <template>
     <AboutTemp>
-        <template #heading>About me & Abilities</template>
-        <template #content>Likes IT at many levels, creativity in art as digital or paper work. Keep having fun while developing or making new stuff on a computer.</template>
-    </AboutTemp>
+        <template #heading>
+          <h3>About me & Abilities</h3>
+        </template>
 
-    <TheImageTemp
-        defineSrc="https://img.shields.io/github/languages/count/Matthias-Geslin/main?style=for-the-badge&logo=vuedotjs"
-        defineAlt="GitHub language count">
-    </TheImageTemp>
+        <template #content>
+          <article class="baseContent">
+            <p>Likes IT at many levels, creativity in art as digital or paper work. Keep having fun while developing or making new stuff on a computer.</p>
+          </article>
+        </template>
+    </AboutTemp>
 
     <TheImageTemp 
         defineSrc="src/assets/images/CV.pdf" 
@@ -50,6 +52,8 @@ import TheImageTemp from '../components/TheImageTemp.vue'
     </TheImageTemp>
 
     <div v-for="(value) in listItems">
-    {{ value[0] }} : {{ value[1] }}%
+      <article class="baseContent">
+        <p>Le language {{ value[0] }} est présent à {{ value[1] }}%.</p>
+      </article>
   </div>
 </template>
