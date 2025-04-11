@@ -1,6 +1,5 @@
 <script setup>
 import AboutTemp from './AboutTemp.vue'
-import TheImageTemp from '../components/TheImageTemp.vue'
 
 </script>
 
@@ -24,7 +23,7 @@ import TheImageTemp from '../components/TheImageTemp.vue'
         var jsValue = (([finalRes][0]["JavaScript"] / totalValue)*100).toFixed(2);
         var htmlValue = (([finalRes][0]["HTML"] / totalValue)*100).toFixed(2);
 
-        this.listItems = [["Vue",vueValue], ["Css", cssValue], ["JavaScript", jsValue] ,["Html", htmlValue]];
+        this.listItems = [["Vue",vueValue,"green"], ["Css", cssValue,"blue"], ["JS", jsValue, "goldenrod"] ,["Html", htmlValue, "coral"]];
       }
     },
     mounted() {
@@ -46,14 +45,18 @@ import TheImageTemp from '../components/TheImageTemp.vue'
         </template>
     </AboutTemp>
 
-    <TheImageTemp 
-        defineSrc="src/assets/images/CV.pdf" 
-        defineAlt="Picture of my current updated CV.">
-    </TheImageTemp>
-
-    <div v-for="(value) in listItems">
-      <article class="baseContent">
-        <p>Le language {{ value[0] }} est présent à {{ value[1] }}%.</p>
-      </article>
+  <div class="box">
+    <ul>
+      <li>Languages used:</li>
+      <li v-for="value in listItems">
+        <div class="lang">
+          <div class="bar">
+            <div class="progress" v-bind:style="{background:value[2],'width': value[1] + '%'}">
+              {{ value[0] }}<span class="percent">{{ value[1] }}%</span>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
 </template>
