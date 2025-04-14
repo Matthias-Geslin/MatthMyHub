@@ -23,7 +23,7 @@ import AboutTemp from './AboutTemp.vue'
         var jsValue = (([finalRes][0]["JavaScript"] / totalValue)*100).toFixed(2);
         var htmlValue = (([finalRes][0]["HTML"] / totalValue)*100).toFixed(2);
 
-        this.listItems = [["Vue",vueValue,"green"], ["Css", cssValue,"blue"], ["JS", jsValue, "goldenrod"] ,["Html", htmlValue, "coral"]];
+        this.listItems = [["Vue",vueValue,"green"], ["Css", cssValue,"dodgerblue"], ["JS", jsValue, "goldenrod"] ,["Html", htmlValue, "coral"]];
       }
     },
     mounted() {
@@ -40,14 +40,17 @@ import AboutTemp from './AboutTemp.vue'
 
         <template #content>
           <article class="baseContent">
-            <p>Likes IT at many levels, creativity in art as digital or paper work. Keep having fun while developing or making new stuff on a computer.</p>
+            <p>
+              Likes IT at many levels, creativity in art as digital or paper work. Keep having fun while developing or making new stuff on a computer, or just gaming full days. 
+              Active on Twitch as well pass by and checck out what's going on !
+            </p>
           </article>
         </template>
     </AboutTemp>
 
-  <div class="box">
+  <div class="box baseContent">
     <ul>
-      <li>Languages used:</li>
+      <li>Languages used in this repository:</li>
       <li v-for="value in listItems">
         <div class="lang">
           <div class="bar">
