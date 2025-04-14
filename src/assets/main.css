@@ -93,11 +93,11 @@ header nav {
 header nav a {
   display: inline-block;
   padding: 0.5rem 1rem;
-  border-width: 0 1px;
+  border-width: 0 2px;
   border-style: solid;
 }
 header nav a:hover {
-  border-width: 1px 0;
+  border-width: 2px 0;
 }
 
 section {
@@ -108,27 +108,56 @@ section h3 {
   text-align: center;
 }
 
+/* basecontent to redirect */
 .baseContent {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
 }
-.baseContent p {
+.baseContent p, .box{
   padding: 1rem;
   border-radius: 1rem;
   background-color: var(--accent-color);
 }
 
+/* About -> Skills */
+ul li {
+  padding: 10px;
+}
+.lang {
+  margin: auto;
+  font-size: large;
+  font-weight: 600;
+}
+.bar { 
+  width: 100%;
+  overflow: hidden;
+  padding: 5px;
+}
+.progress {
+  float: left;
+  padding: 15px;
+}
+.percent {
+  float: right;
+  font-weight: 600;
+  height: 30px;
+  line-height: 30px;
+}
+
+/* END */
+
 picture {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 picture img {
   user-select: none;
-  max-width: 85%;
-  margin: 0 10%;
+  max-width: 65%;
 }
+
 
 .controls {
   display: flex;
@@ -164,7 +193,6 @@ footer {
 footer ul {
   display: flex;
   justify-content: space-around;
-  list-style: none;
   padding: 0;
 }
 
@@ -185,6 +213,10 @@ i {
   place-content: center;
   width: 32px;
   height: 32px;
+}
+
+ul {
+  list-style-type: none;
 }
 
 @media (min-width: 1281px) {
