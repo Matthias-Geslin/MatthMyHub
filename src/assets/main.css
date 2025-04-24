@@ -6,6 +6,10 @@
   --background-color-secondary: #ebe9e9;
   --background-color-tertiary: #354157;
   --background-color-fourth: rgb(165, 102, 92);
+  --background-color-fifth: rgb(82, 205, 82);
+  --background-color-sixth: rgb(126, 158, 255);
+  --background-color-seventh: rgb(247, 247, 110);
+  --background-color-eighth: rgba(255, 166, 0, 0.872);
   --accent-color: #cacaca;
   --text-primary-color: #222;
   --element-size: 4rem;
@@ -18,10 +22,18 @@
   --background-color-tertiary: #4e6082;
   --accent-color: #3f3f3f;
   --text-primary-color: #ffffff;
+  --background-color-fifth: rgb(7, 123, 7);
+  --background-color-sixth: rgb(40, 40, 234);
+  --background-color-seventh: rgb(206, 206, 26);
+  --background-color-eighth: rgb(237, 160, 16);
 }
 
 p {
   color: var(--text-primary-color);
+}
+
+.hide {
+  display: none;
 }
 
 .switch-checkbox {
@@ -104,6 +116,7 @@ header nav a:hover {
 section {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 section h3 {
   text-align: center;
@@ -115,6 +128,12 @@ section h3 {
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
+  width: 100%;
+
+  a {
+    font-weight: bold;
+    text-decoration: underline;
+  }
 }
 .baseContent p, 
 .box,
@@ -124,17 +143,22 @@ menu ul {
   background-color: var(--accent-color);
 }
 
+.box {
+  padding: 0;
+}
 /* About -> Skills */
 ul li {
   padding: 10px;
 }
+.ul-lang {
+  padding: 0;
+  margin: 0;
+}
 .lang {
-  margin: auto;
   font-size: large;
   font-weight: 600;
 }
 .bar { 
-  width: 100%;
   overflow: hidden;
   padding: 5px;
 }
@@ -149,18 +173,39 @@ ul li {
   line-height: 30px;
 }
 
+.color-s-one {
+  background-color: var(--background-color-fifth);
+}
+.color-s-two {
+  background-color: var(--background-color-sixth);
+}
+.color-s-three {
+  background-color: var(--background-color-seventh);
+}
+.color-s-four {
+  background-color: var(--background-color-eighth);  
+}
+
 /* END */
 
 figure {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-figure img {
-  user-select: none;
-  max-width: 65%;
-}
 
+  img {
+    user-select: none;
+    max-width: 65%;
+  }
+
+  figcaption {
+    text-align: center;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
 /*
 .controls {
   display: flex;
