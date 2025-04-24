@@ -23,7 +23,7 @@ import AboutTemp from './AboutTemp.vue'
         var jsValue = (([finalRes][0]["JavaScript"] / totalValue)*100).toFixed(2);
         var htmlValue = (([finalRes][0]["HTML"] / totalValue)*100).toFixed(2);
 
-        this.listItems = [["Vue",vueValue,"green"], ["Css", cssValue,"dodgerblue"], ["JS", jsValue, "goldenrod"] ,["Html", htmlValue, "coral"]];
+        this.listItems = [["Vue",vueValue,"color-s-one"], ["Css", cssValue,"color-s-two"], ["JS", jsValue, "color-s-three"] ,["Html", htmlValue, "color-s-four"]];
       }
     },
     mounted() {
@@ -33,33 +33,35 @@ import AboutTemp from './AboutTemp.vue'
 </script>
 
 <template>
-    <AboutTemp>
-        <template #heading>
-          <h3>About me & Abilities</h3>
-        </template>
+  <AboutTemp>
+      <template #heading>
+        <h3>About me, the website & abilities</h3>
+      </template>
 
-        <template #content>
-          <article class="baseContent">
-            <p>
-              Likes IT at many levels, creativity in art as digital or paper work. Keep having fun while developing or making new stuff on a computer, or just gaming full days. 
-              Active on Twitch as well pass by and checck out what's going on !
-            </p>
-          </article>
-        </template>
-    </AboutTemp>
+      <template #content>
+        <article class="baseContent">
+          <p>
+            Likes IT at many levels, creativity in art as digital or paper work. Keep having fun while developing or making new stuff on a computer, or just gaming full days. 
+            Will be on Twitch in a near future so check out my link <a href="https://www.twitch.tv/matthmoica" target="_blank"><i class="fa-brands fa-twitch"></i>Twitch</a> and follow if you are interested in diverse content !
+          </p>
+        </article>
 
-  <div class="box baseContent">
-    <ul>
-      <li>Languages used in this repository:</li>
-      <li v-for="value in listItems">
-        <div class="lang">
-          <div class="bar">
-            <div class="progress" v-bind:style="{background:value[2],'width': value[1] + '%'}">
-              {{ value[0] }}<span class="percent">{{ value[1] }}%</span>
-            </div>
-          </div>
+        <div class="box baseContent">
+          <ul class="ul-lang">
+            <li>Languages used for the making of this website:</li>
+            <li class="li-lang" v-for="value in listItems">
+              <div class="lang">
+                <div class="bar">
+                  <span class="percent">{{ value[0] }}: {{ value[1] }}%</span>
+                  <div :class="'progress ' + value[2]" v-bind:style="{'width': value[1] + '%' }">
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
-      </li>
-    </ul>
-  </div>
+      </template>
+  </AboutTemp>
+
+  
 </template>
