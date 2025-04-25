@@ -5,14 +5,14 @@ import HomeTemp from './HomeTemp.vue'
 <template>
   <HomeTemp>
     <template #heading>
-      <h3>Knowledge must and have to be kept at all costs. Life is an never ending experience.</h3>
+      <blockquote>Knowledge must and have to be kept at all costs. Life is an never ending experience.</blockquote>
     </template>
 
     <template #content>
       <article class="baseContent home">
-        <p>My work will be shown in here, fun or serious ones. Web langage used in here, HTML5, CSS3 & JS (VueJs).</p>
-        <p>Useful informations are in the other pages of the website, <b><RouterLink to="/about"><u>About</u></RouterLink></b> and <b><RouterLink to="/creativity"><u>Creativity</u></RouterLink></b>.</p>
-        <p>Feel free to contact me if you are in need, there are many contact links at the bottom of the page.</p>
+        <p>My work will be shown in here, fun and serious ones. With a professional aspect or just on my creative thoughts, my passion will go through.</p>
+        <p>Informations <b><RouterLink to="/about"><u>about</u></RouterLink></b> me and the <b><RouterLink to="/creativity"><u>creative</u></RouterLink></b> aspect are rendered.</p>
+        <p>Feel free to contact me for job offers or reviews both are important enough to be heard. There are a few contact links at the bottom of the page.</p>
       </article>
     </template>
   </HomeTemp>
