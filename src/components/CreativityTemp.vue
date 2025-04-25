@@ -12,69 +12,35 @@ const images = reactive([
   ['devFyi', 'devFyi_03.png', 'Screenshot of a Bot Integration and the configuration', 'MatthMyBot', 'https://github.com/Matthias-Geslin/MatthMyBot', "MatthMyBot a bot dedicated for MatthMoiÇa's discord server, made by me and for experimentations purposes."]
 ]) 
 
-
 function imagesShown() {
   return images.length > 0 ? images.length : '';
 }
-
-function idSelector() {
-  var selector = document.getElementsByClassName('professional');
-}
-
-
-
 </script>
 
 <template>
-  <menu>
-    <ul>
-      <li>
-        <input @click="idSelector()" id="professionalInput" name="creativity" type="radio" value="professional" checked>
-        <label class="" for="professionalInput">Professional</label>
-      </li>
-      <li>
-        <input @click="idSelector('creative')"  id="creativeInput" name="creativity" type="radio" value="creativity">
-        <label class="" for="creativeInput">Creative</label>
-      </li>
-      <li>  
-        <input @click="idSelector('devFyi')" id="devFyiInput" name="creativity" type="radio" value="devFyi">
-        <label class="" for="devFyiInput">Dev - WIP</label>
-      </li>
-    </ul>
-  </menu>
-  
+    <input class="hide" id="all" type="radio" name="creativity" checked>
+    <input class="hide" id="professional" name="creativity" type="radio" value="professional">
+    <input class="hide" id="creative" name="creativity" type="radio" value="creativity">
+    <input class="hide" id="devFyi" name="creativity" type="radio" value="devFyi">
+
   <h3>Original creator of those {{ imagesShown() }} projects below.</h3>
 
-  <div v-for="image in images">
-    <figure id="professional" class="professional" v-if="image[0] === 'professional'">
-      
-      <img :id="image[0]" :name="image[0]" :src="'/images/' + image[1]" :alt="image[2]" />
-    
+  <menu class="menu">
+    <label for="all">All</label>
+    <label class="" for="professional">Professional</label>
+    <label class="" for="creative">Creative</label>
+    <label class="" for="devFyi">Dev - WIP</label>
+  </menu>
+
+  <figure class="gallery">
+    <figure v-for="image in images" :class="'all ' + image[0]">   
+      <img :id="image[0]" :name="image[3]" :src="'/images/' + image[1]" :alt="image[2]" />
       <figcaption>
         <h3>{{ image[3] }}</h3>
+        <p v-if="image[0] == 'creative'">{{ image[4] }}</p>
+        <a v-if="image[0] == 'devFyi'" :href="image[4]">{{  image[4] }}</a>
         <p>{{ image[5] }}</p>
       </figcaption>
     </figure>
-    
-    <figure id="creative" class="creative" v-else-if="image[0] === 'creative'">
-      
-      <img :id="image[0]" :name="image[0]" :src="'/images/' + image[1]" :alt="image[2]" />
-    
-      <figcaption>
-        <h3>{{ image[3] }}</h3>
-        <p>{{ image[4] }}</p>
-      </figcaption>
-    </figure>
-    
-    <figure id="devFyi" class="devFyi" v-else-if="image[0] === 'devFyi'">
-      
-      <img :id="image[0]" :name="image[0]" :src="'/images/' + image[1]" :alt="image[2]" />
-    
-      <figcaption>
-        <h3>{{ image[3] }}</h3>
-        <a :href="image[4]">{{ image[4] }}</a>
-        <p>{{ image[5] }}</p>
-      </figcaption>
-    </figure>
-  </div>
+  </figure>
 </template>
