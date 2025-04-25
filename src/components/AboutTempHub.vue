@@ -12,7 +12,7 @@ import AboutTemp from './AboutTemp.vue'
     },
     methods: {
       async getData() {
-        const res = await fetch("https://api.github.com/repos/Matthias-Geslin/main/languages");
+        const res = await fetch("https://api.github.com/repos/Matthias-Geslin/MatthMyHub/languages");
         const finalRes = await res.json();
         this.listItems = finalRes;
         var totalValue = [finalRes][0]["Vue"]+[finalRes][0]["HTML"]+[finalRes][0]["CSS"]+[this.listItems][0]["JavaScript"];
@@ -41,8 +41,12 @@ import AboutTemp from './AboutTemp.vue'
       <template #content>
         <article class="baseContent">
           <p>
-            Likes IT at many levels, creativity in art as digital or paper work. Keep having fun while developing or making new stuff on a computer, or just gaming full days. 
-            Will be on Twitch in a near future so check out my link <a href="https://www.twitch.tv/matthmoica" target="_blank"><i class="fa-brands fa-twitch"></i>Twitch</a> and follow if you are interested in diverse content !
+            Likes IT at many levels like assembling computers, making things for myself or friends, onepage websites or blogs. Creativity in art as digital or paper work. I Keep having fun while developing or making new stuff on a computer, or just gaming full days. 
+            </p>
+          <p>
+            A future project will be streaming on Twitch, check out my <a href="https://stream.matthmoiça.fr/"><i class="fa-brands fa-twitch"></i>Twitch</a> link and follow if you are interested in diverse content ! 
+            The website is ON but the content isn't yet. I'm making my own Discord server, and Discord bot just for fun and still in WIP.
+            Just prepared the full package before going live!
           </p>
         </article>
 
