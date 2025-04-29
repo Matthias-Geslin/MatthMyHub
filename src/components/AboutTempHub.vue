@@ -35,24 +35,18 @@ import AboutTemp from './AboutTemp.vue'
 <template>
   <AboutTemp>
       <template #heading>
-        <h3>About me, the website & abilities</h3>
+        <h3>{{ $t('about.title') }}</h3>
       </template>
 
       <template #content>
         <article class="baseContent">
-          <p>
-            Likes IT at many levels like assembling computers, making things for myself or friends, onepage websites or blogs. Creativity in art as digital or paper work. I Keep having fun while developing or making new stuff on a computer, or just gaming full days. 
-            </p>
-          <p>
-            A future project will be streaming on Twitch, check out my <a href="https://stream.matthmoiça.fr/"><i class="fa-brands fa-twitch"></i>Twitch</a> link and follow if you are interested in diverse content ! 
-            The website is ON but the content isn't yet. I'm making my own Discord server, and Discord bot just for fun and still in WIP.
-            Just prepared the full package before going live!
-          </p>
+          <p>{{ $t('about.content.myExperience') }}</p>
+          <p>{{ $t('about.content.websiteObjective') }}<a href="https://stream.matthmoiça.fr/"><i class="fa-brands fa-twitch"></i>Twitch</a></p>
         </article>
 
         <div class="box baseContent">
           <ul class="ul-lang">
-            <li>Languages used for the making of this website:</li>
+            <li>{{ $t('about.langages') }}</li>
             <li class="li-lang" v-for="value in listItems">
               <div class="lang">
                 <div class="bar">
