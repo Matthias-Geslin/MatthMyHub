@@ -6,7 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
+.htaccess
 node_modules
 .DS_Store
 dist
@@ -32,3 +32,4 @@ public
 vite.config.js
 package-lock.json
 main.scss
+src/assets/images

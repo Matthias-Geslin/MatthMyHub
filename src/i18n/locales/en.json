@@ -1,0 +1,56 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "creativity": "Creativity"
+    },
+    "home": {
+        "headFigure": {
+            "imageAlt": "Welcoming image",
+            "figcaption": {
+                "quote": "Knowledge must have to be kept at all costs. Life is an never ending experience.",
+                "p": "Web Developer"
+            }
+        },
+        "content": {
+            "pDescription": "My work will be shown in here, fun and serious ones. With a professional aspect or just on my creative thoughts, my passion will go through.",
+            "pInfo": "Informations about me and my creative aspects are rendered.",
+            "pContact": "Feel free to contact me for job offers or reviews, both are important enough to be heard. There are my contact links at the bottom of the page."
+        }
+    },
+    "about": {
+        "title": "About me, the website & abilities",
+        "content": {
+            "myExperience": "Likes IT at many levels like assembling computers and trobleshoot them, making things for myself or friends, onepage websites or blogs. Creativity in art as digital drawings or in paper work. I Keep having fun while developing or making new stuff on a computer, or just gaming on Sunday.",
+            "websiteObjective": "A future project will be streaming on Twitch, check out my link and follow if you are interested in diverse content ! The website is ON but the stream isn't LIVE yet. I'm making my own Discord server, and Discord bot just for fun and still in WIP. Just preparing the full package before going live!"
+        },
+        "langages": "Languages used for the making of this website:"
+    },
+    "creativity": {
+        "title": {
+            "firstPart": "Original creator of those",
+            "secondPart": "projects below."
+        },
+        "menu": {
+            "labelAll": "All",
+            "labelPro": "Professional",
+            "labelCrea": "Creativity",
+            "labelDev": "Dev - WIP"
+        },
+        "gallery": {
+            "project01":  "Basics of the Html and Css. OpenClassroom Project.",
+            "project03": "Learn the Javascript via multiple aspects and functions (eg. Slider, Maps, Canvas & Ajax).",
+            "project04": "Learn the concept of MVC in PHP and created a blog about that use case.",
+            "pro01": "QR Code linked One Page website",
+            "procreatePanels": "My default Twitch Graphism Panel for contact, links.",
+            "procreateLogo": "MMC Logo for my web domain.",
+            "livestream": "Website for Livestream and YouTube.",
+            "discordServer": "Discord server of MatthMoiÇa, server made for the community, fans and whoever wants to join. Made for experimentations purposes.",
+            "discordBot": "MatthMyBot a bot dedicated for MatthMoiÇa's discord server, made by me and for experimentations purposes."
+        }
+    },
+    "locale": {
+        "en": "EN",
+        "fr": "FR"
+    }
+}

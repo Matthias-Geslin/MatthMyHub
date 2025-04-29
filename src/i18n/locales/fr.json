@@ -1,0 +1,56 @@
+{
+    "nav": {
+        "home": "Accueil",
+        "about": "À propos",
+        "creativity": "Créatif"
+    },
+    "home": {
+        "headFigure": {
+            "imageAlt": "Image d'accueil",
+            "figcaption": {
+                "quote": "Le savoir doit être absolument préservé à tout prix. La vie est une expérience sans fin.",
+                "p": "Développeur Web"
+            }
+        },
+        "content": {
+            "pDescription": "Mes travaux seront affichés ici, ceux drôles et sérieux. Avec un aspect professionnel ou juste mes idées créatives posées sur du code, ma passion passera à travers.",
+            "pInfo": "Vous trouverez des informations à mon propos sur ce site ainsi que ma créativité.",
+            "pContact": "Libre à vous de me joindre par les liens sur le pied de page, que cela soit pour des offres d'emploi ou pour des critiques, les deux sont toutes autant importantes pour être entendues."
+        }
+    },
+    "about": {
+        "title": "À propos de moi, du site et mes capacités",
+        "content": {
+            "myExperience": "J'aime l'informatique sur plusieurs domaines, comme assembler des ordinateurs et les dépanner, créer des choses pour moi ou mes amis, des sites web ou des blogs. J'aime aussi la créativité artistique, qu'elle soit en dessin numérique ou papier. Je m'amuse en développant ou en créant de nouvelles choses sur ordinateur, ou simplement en jouant toute la journée le dimanche.",
+            "websiteObjective": "Un projet futur sera de débuter le streaming sur Twitch, passez par mon lien si vous êtes interessés dans du contenu diverse. Le site web est en ligne mais je ne suis pas en LIVE encore. Je prépares le site en avance ainsi que le serveur discord, le bot aussi juste pour m'amuser est toujours en production. Je prépare le gros package avant de partir en LIVE!"
+        },
+        "langages": "Langues utilisées pour la conception de ce site:"
+    },
+    "creativity": {
+        "title": {
+            "firstPart": "Créateur original de ces",
+            "secondPart": "projets ci-dessous."
+        },
+        "menu": {
+            "labelAll":"Tout",
+            "labelPro":"Professionnel",
+            "labelCrea":"Créatif",
+            "labelDev":"En production"
+        },
+        "gallery": {
+            "project01":  "Les bases de l'Html et du CSS. Projet OpenClassrooms.",
+            "project03": "Les bases du Javascript par plusieurs aspects et fonctionnalités (ex: Carousel, Maps, Canvas & Ajax). Projet OpenClassrooms.",
+            "project04": "Les bases du PHP dans son modèle MVC et concevoir un blog dans ce cas d'utilisation. Projet OpenClassrooms.",
+            "pro01": "Site vitrine lié à un QR Code pour la carte du restaurant L'Héroz'O.",
+            "procreatePanels": "Mon panneau graphique par défault pour Twitch de contact et des liens.",
+            "procreateLogo": "Logo MMC de mon domaine actuel.",
+            "livestream": "Site internet pour le Streaming et Youtube.",
+            "discordServer": "Serveur Discord MatthMoiÇa, serveur préparé pour la communauté, fan et qui souhaite rejoindre. Crée en premier lieu pour des expérimentations.",
+            "discordBot": "MatthMyBot est le bot dédié pour le serveur discord MatthMoiÇa crée pour des experimentations et à pour but d'être utilisé sur le serveur."
+        }
+    },
+    "locale": {
+        "en": "EN",
+        "fr": "FR"
+    }
+}
