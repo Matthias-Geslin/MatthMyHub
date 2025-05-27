@@ -1,12 +1,11 @@
 <script setup>
 import { reactive, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n';
-const { t, locale } = useI18n();
-import i18n from '../i18n';
+const { t } = useI18n();
 
 const images = reactive([
-  {    category: 'professional', file: 'project_01.jpg', alt: 'Image of project 1', titleKey: 'Webagency', descKey: 'creativity.gallery.project01', nakedUrl: 'https://github.com/Matthias-Geslin/Projet_1_Webagency', url: 'https://github.com/Matthias-Geslin/Projet_1_Webagency'  },
-  {    category: 'professional', file: 'project_03.jpg', alt: 'Image of project 3', titleKey: 'JavaScript', descKey: 'creativity.gallery.project03', nakedUrl: 'https://github.com/Matthias-Geslin/Project_3_Js', url: 'https://github.com/Matthias-Geslin/Project_3_Js'  },
+  {    category: 'professional', file: 'project_01.jpg', alt: 'Image of project 1', titleKey: 'Webagency', descKey: 'creativity.gallery.project01', nakedUrl: 'https://webagency.matthmoiça.fr/', url: 'https://webagency.matthmoiça.fr/' },
+  {    category: 'professional', file: 'project_03.jpg', alt: 'Image of project 3', titleKey: 'JavaScript', descKey: 'creativity.gallery.project03', nakedUrl: 'https://javascript.matthmoiça.fr/', url: 'https://javascript.matthmoiça.fr/'  },
   {    category: 'professional', file: 'project_04.jpg', alt: 'Image of project 4', titleKey: 'Blog Jean Forteroche', descKey: 'creativity.gallery.project04', nakedUrl: 'https://github.com/Matthias-Geslin/Project_4_Blog', url: 'https://github.com/Matthias-Geslin/Project_4_Blog'  },
   {    category: 'professional', file: 'pro_01.png', alt: 'Image of a professional one-page', titleKey: "L'HÉROZ'O", descKey: 'creativity.gallery.pro01', nakedUrl: 'https://www.lherozo.fr', url: 'https://www.lherozo.fr'  },
   {    category: 'creative', file: 'procreate_01.png', alt: 'Screenshot from Procreate', titleKey: 'Procreate', descKey: 'creativity.gallery.procreatePanels'  },
@@ -54,7 +53,7 @@ onMounted(() => {
       <figcaption>
         <h3>{{ image.titleKey }}</h3>
         <p>{{ t(image.descKey) }}</p>
-        <a v-if="image.url" :href="image.url">{{  image.nakedUrl }}</a>
+        <a v-if="image.url" :href="image.url" target="_blank">{{ image.nakedUrl }}<i class="fa-solid fa-up-right-from-square"></i></a>
       </figcaption>
     </figure>
   </figure>
