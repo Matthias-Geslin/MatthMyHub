@@ -1,6 +1,6 @@
 {
   "name": "main",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.6",
+    "tailwindcss": "^4.1.6",
     "vue": "^3.5.13",
     "vue-i18n": "^10.0.7",
     "vue-router": "^4.5.0"
