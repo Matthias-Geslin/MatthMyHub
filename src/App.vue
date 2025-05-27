@@ -48,6 +48,9 @@ onMounted(() => {
 
 <template>
   <header>
+      <input type="checkbox" id="dropdown">
+      <label for="dropdown" class="ddLabel">
+      </label>
       <nav>
         <RouterLink :to="Tr.i18nRoute({ name: 'home' })">{{  $t('nav.home') }}</RouterLink>
         <RouterLink :to="Tr.i18nRoute({ name: 'about' })">{{ $t("nav.about") }}</RouterLink>
