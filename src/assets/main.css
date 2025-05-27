@@ -82,7 +82,8 @@ header:has(> #dropdown:checked) {
   display: block;
   position: absolute;
   font-size: xx-large;
-  left:  calc(100% / 1.2 + 1rem);
+  right: 0;
+  top: 0;
   z-index: 3;
 }
 .ddLabel::before {
@@ -91,6 +92,9 @@ header:has(> #dropdown:checked) {
   font-weight: 900;
   font-size: 24px;
   cursor: pointer;
+  color: var(--text-primary-color);
+  background-color: var(--background-color-fourth); 
+  padding: 1rem;
 }
 #dropdown:checked + label::before {
   content:"\f00d";
@@ -274,7 +278,7 @@ figure {
   }
 }
 
-menu {
+/* menu {
   display: flex;
   justify-content: center;
 
@@ -300,9 +304,7 @@ menu {
         }
       }
     }    
-}
-
-
+} */
 
 
 /***** Menu *****/
