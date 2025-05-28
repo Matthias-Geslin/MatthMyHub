@@ -10,9 +10,21 @@
   --background-color-sixth: rgb(126, 158, 255);
   --background-color-seventh: rgb(247, 247, 110);
   --background-color-eighth: rgba(255, 166, 0, 0.872);
-  --accent-color: #cacaca;
+  --accent-color: #c8c6c6;
   --text-primary-color: #222;
   --element-size: 4rem;
+
+  --margin-xs: .5rem;
+  --margin-s: .75rem;
+  --margin-m: 1rem;
+  --margin-l: 1.25rem;
+  --margin-xl: 1.75rem;
+
+  --padding-xs: .5rem;
+  --padding-s: .75rem;
+  --padding-m: 1rem;
+  --padding-l: 1.25rem;
+  --padding-xl: 1.75rem;
 }
 
 /* Define styles for the root window with dark - mode preference */
@@ -36,7 +48,6 @@ body {
 }
 
 #app {
-  margin: 0 auto;
   font-weight: normal;
 }
 
@@ -49,8 +60,8 @@ header nav {
 
 header nav a {
   align-self: center;
-  padding: 0.5rem 1rem;
-  margin: 1rem;
+  padding: var(--margin-xs) var(--margin-m);
+  margin: var(--margin-m);
   border-width: 0 2px;
   border-style: solid;
 }
@@ -65,7 +76,7 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: column;
   font-weight: bold;
-  padding: 1rem 0 1rem 0;
+  padding: var(--padding-m);
 }
 
 /* select parent */
@@ -94,7 +105,7 @@ header:has(> #dropdown:checked) {
   cursor: pointer;
   color: var(--text-primary-color);
   background-color: var(--background-color-fourth); 
-  padding: 1rem;
+  padding: var(--padding-m);
 }
 #dropdown:checked + label::before {
   content:"\f00d";
@@ -130,7 +141,7 @@ header:has(> #dropdown:checked) {
 select {
   background-color: var(--background-color-fourth);
   color: var(--text-primary-color);
-  padding: 1rem;
+  padding: var(--padding-m);
   border-width: 2px;
   border-color: var(--text-primary-color);
   border-style: solid;
@@ -185,7 +196,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem;
+  margin: var(--margin-m);
 }
 section h3 {
   text-align: center;
@@ -204,7 +215,7 @@ section h3 {
   }
 }
 .baseContent > * {
-  padding: 1rem;
+  padding: var(--padding-m);
   border-radius: 1rem;
   background-color: var(--accent-color);
   border: 1px solid var(--background-color-tertiary);
@@ -222,7 +233,7 @@ section h3 {
   padding: 0;
 }
 ul li {
-  padding: 10px;
+  padding: var(--padding-xs);
 }
 .ul-lang {
   padding: 0;
@@ -234,11 +245,11 @@ ul li {
 }
 .bar { 
   overflow: hidden;
-  padding: 5px;
+  padding: var(--padding-xs);
 }
 .progress {
   float: left;
-  padding: 15px;
+  padding: var(--padding-s);
 }
 .percent {
   float: right;
@@ -330,7 +341,7 @@ figure {
   justify-content: center;
   position: relative;
   border-radius: 5px;
-  padding: 6px 12px;
+  padding: var(--padding-xs) var(--padding-s);
 }
 
 .menu label:hover, .menu label:active, .menu label:focus {
@@ -357,7 +368,26 @@ figure {
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
-  margin: 40px -6px;
+  margin: var(--margin-xl);
+
+  figure {
+    background-color: transparent;
+    position: relative;
+    img {
+      border-radius: 5%;
+    }
+    figcaption {
+      display: none;
+      background-color: #121212b6;
+      position: absolute;
+      border-radius: 5%;
+      width: 100%;
+      top: 0;
+    }
+  }
+}
+.gallery figure:hover > figcaption {
+  display: block;
 }
 
 /****** Gallery Controls ******/
@@ -367,7 +397,6 @@ figure {
 #devFyi:checked ~ .gallery .devFyi {
   display: block;
   animation: opacity 5s;
-  
 }
 
 
@@ -420,7 +449,7 @@ p {
 /******  @Media rules ******/
 @media (min-width: 576px) {
   .gallery figure {
-    margin: 8px;
+    margin: var(--margin-xs);
     width: calc(100% / 2 - 16px);
   }
   .menu {
@@ -459,7 +488,7 @@ p {
     width: 60%;
   }
   .gallery figure {
-    margin: 10px;
+    margin: var(--margin-xs);
     width: calc(100% / 3 - 20px);
   }
   .baseContent {
@@ -468,12 +497,12 @@ p {
     width: 100%;
 
     p {
-      margin: 1rem;
+      margin: var(--margin-m);
       width: calc(100% / 2 - 10px);
     }
   }
   .box { 
-  margin: 1rem;
+  margin: var(--margin-m);
   width: auto;
   }
   section {
@@ -485,7 +514,6 @@ p {
     width: 40%;
   }
   .gallery figure {
-    margin: 12px;
     width: calc(100% / 4 - 24px);
   }
 }
