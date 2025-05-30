@@ -81,7 +81,6 @@ input[type="checkbox"] {
 
 /* select parent */
 header:has(> #dropdown:checked) {
-  display: flex;
   flex-direction: column;
   margin-bottom: -1rem;
   line-height: 1.5;
@@ -95,7 +94,7 @@ header:has(> #dropdown:checked) {
   font-size: xx-large;
   right: 0;
   top: 0;
-  z-index: 0;
+  z-index: 3;
 }
 .ddLabel::before {
   font-family: "Font Awesome 5 Free";
@@ -469,6 +468,10 @@ p {
   flex-direction: row;
   justify-content: space-evenly;
   }
+
+  header:has(> #dropdown:checked) .ddLabel {
+    z-index: 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -491,12 +494,14 @@ p {
   }
   .baseContent {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     width: 100%;
 
     p {
       margin: var(--margin-m);
       width: calc(100% / 2 - 10px);
+      height: -webkit-fill-available;
     }
   }
   .box { 
