@@ -95,7 +95,7 @@ header:has(> #dropdown:checked) {
   font-size: xx-large;
   right: 0;
   top: 0;
-  z-index: 3;
+  z-index: 0;
 }
 .ddLabel::before {
   font-family: "Font Awesome 5 Free";
@@ -464,13 +464,14 @@ p {
   .baseContent {
     width: calc(100% / 2 - 10px);
   }
+
+  #dropdown:checked ~ nav {
+  flex-direction: row;
+  justify-content: space-evenly;
+  }
 }
 
 @media (min-width: 768px) {
-  .menu {
-    width: 80%;
-  }
-
 }
 @media (min-width: 992px) {
   .fig-head-quote {
@@ -483,9 +484,6 @@ p {
       left: calc(50% / 2);
       width: calc(100% / 2 - 10px);
     }
-  }
-  .menu {
-    width: 60%;
   }
   .gallery figure {
     margin: var(--margin-xs);
@@ -511,7 +509,7 @@ p {
 }
 @media (min-width: 1200px) {
   .menu {
-    width: 40%;
+    max-width: 80%;
   }
   .gallery figure {
     width: calc(100% / 4 - 24px);
